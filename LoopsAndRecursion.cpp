@@ -19,28 +19,27 @@ int recursiveFunc(int n)
 }
 
 // Split String: There are several ways
-int splitString(string inputStr)
+int splitString()
 {
     // 1. strtok() 
     /* split string into pieces by delimiter 
     - only print the first part before the first delimiter if many */
-    // char str[100]; // declare the size of string
-    // cout << " Enter a string: " << endl;
-    // cin.getline(str, 100); // use getline() function to read a string from input stream
+    char str[100]; // declare the size of string
+    cout << " Enter a string: " << endl;
+    cin.getline(str, 100); // use getline() function to read a string from input stream
     char *ptr;              // declare a ptr pointer
-    ptr = strtok(inputStr, ","); // use strtok() function to separate string using comma (,) delimiter.
-    cout << " \n Split string using strtok() function: " << ptr << " ... " << strtok(NULL, ",") << endl;
+    ptr = strtok(str, ","); // use strtok() function to separate string using comma (,) delimiter.
+    cout << "\nFirst substring using strtok() function: " << ptr << endl;
+    cout << "Second substring using strtok() function: " << strtok(NULL, ",") << endl;
     // use while loop to check ptr is not null
     // while (ptr != NULL)
     // {
     //     cout << ptr << endl; // print the string token
     //     ptr = strtok(NULL, ",");
     // }
-    return 0;
-    // 2. split()
-    // 3. std::getline()
-    // 4. find()
-    // 5. substr()
+
+    // Find more info: https://www.javatpoint.com/how-to-split-strings-in-cpp
+     return 0;
 }
 // In C++, we have 3 types of loops: While, For and Do ... while SIMILAR to Java
 int main()
@@ -84,5 +83,5 @@ int main()
     cout << "value of recursion: " << recursiveFunc(4) << endl;
 
     // Split string
-    splitString("HMM, wewegw");
+    splitString();
 }
